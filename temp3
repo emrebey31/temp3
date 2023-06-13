@@ -1,0 +1,9 @@
+
+from sklearn.metrics import precision_recall_fscore_support , accuracy_score
+
+list=["precision","recall","fscore","None"]
+
+for i,a in enumerate(list):
+    print(a+": " +str(precision_recall_fscore_support(y_test,pred,average="macro")[i]))
+
+print(accuracy_score(y_test,pred))
